@@ -6,7 +6,7 @@ El objetivo de la prueba es crear una aplicación web sencilla de creación de r
 
 ## Link de app web
 
-[Enlace a la aplicación]([https://pages.github.com/](https://chapp-solutions-reservas.herokuapp.com/))
+[Enlace a la aplicación](https://chapp-solutions-reservas.herokuapp.com/)
 
 ## Tecnologías
 
