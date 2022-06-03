@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Chapp Solutions{% endblock %}
+
+{% block body %}
+    <style>
+        .contenedor { margin: 1em auto; max-width: 1024px; width: 95%; font: 18px/1.5 sans-serif; }
+        .contenedor code { background: #F5F5F5; padding: 2px 6px; }
+    </style>
+
+    <div class="contenedor">
+        <h1>¡Bienvenido a la APP de reservas de Chapp Solutions!</h1>
+
+        Accede al listado de reservas:
+        <ul>
+            <li><a href="{{ path('reservas_listado') }}">Listado de reservas</a></li>
+        </ul>
+    </div>
+{% endblock %}

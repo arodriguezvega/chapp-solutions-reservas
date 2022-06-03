@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Chapp Solutions - Listado de Reservas{% endblock %}
+
+{% block body %}
+    <style>
+        .contenedor { margin: 1em auto; max-width: 1024px; width: 95%; font: 18px/1.5 sans-serif; }
+        .contenedor code { background: #F5F5F5; padding: 2px 6px; }
+        .table, th, td { border: 1px solid; border-collapse: collapse;}
+    </style>
+
+    <div class="contenedor">
+        <h1>Listado de Reservas</h1>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Fecha entrada</th>
+                    <th scope="col">Fecha salida</th>
+                    <th scope="col">Habitación</th>
+                    <th scope="col">Tipo Hab.</th>
+                    <th scope="col">Nº Huéspedes</th>
+                    <th scope="col">Titular</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Teléfono</th>
+                    <th scope="col">Precio TOTAL</th>
+                    <th scope="col">Localizador</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for reserva in listado_reservas %}
+                <tr>
+                    <td>{{ reserva.getFechaEntrada() }}</td>
+                    <td>{{ reserva.getFechaSalida() }}</td>
+                    <td>{{ reserva.getHabitacion().getValues()[0].getNumero() }}</td>
+                    <td>{{ reserva.getHabitacion().getValues()[0].getTipoHabitacion().getNombre() }}</td>
+                    <td>{{ reserva.getNumHuespedes() }}</td>
+                    <td>{{ reserva.getTitular() }}</td>
+                    <td>{{ reserva.getEmail() }}</td>
+                    <td>{{ reserva.getTelefono() }}</td>
+                    <td>{{ reserva.getPrecioTotal() }}</td>
+                    <td>{{ reserva.getLocalizador() }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <input type="button" onclick="location.href = '{{ path('reservas_disponibles') }}';" value="Crear Reserva">
+    </div>
+{% endblock %}

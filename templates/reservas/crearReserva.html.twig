@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Chapp Solutions - Creación de Reserva{% endblock %}
+
+{% block javascripts %}
+    <script>
+
+        /** DATEPICKER **/
+        $(document).ready(function() {
+            $('.js-datepicker').datepicker({
+                format: 'yyyy-mm-dd',
+                startDate: new Date(),
+                endDate: new Date("2022-12-31")
+            });
+        });
+    </script>
+{% endblock %}
+
+{% block body %}
+    <style>
+        .contenedor { margin: 1em auto; max-width: 1024px; width: 95%; font: 18px/1.5 sans-serif; }
+        .contenedor code { background: #F5F5F5; padding: 2px 6px; }
+    </style>
+
+    <div class="contenedor">
+        <h1>Creación de Reservas</h1>
+
+        {{ form(formulario) }}
+    </div>
+{% endblock %}
