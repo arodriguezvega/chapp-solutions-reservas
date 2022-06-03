@@ -1,12 +1,19 @@
 # chapp-solutions-reservas
 
-El objetivo de la prueba es crear una aplicación web sencilla en Symfony 5 de creación de reservas.
+El objetivo de la prueba es crear una aplicación web sencilla de creación de reservas.
 
 ![Image text](https://github.com/arodriguezvega/chapp-solutions-reservas/blob/main/Captura.JPG)
 
 ## Link de app web
 
 
+## Tecnologías
+
+● Symfony 5.4 (PHP 8.1.6)
+
+● JQuery 3.6.0
+
+● SQLite3
 
 ## Postulados
 
