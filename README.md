@@ -13,7 +13,7 @@ El objetivo de la prueba es crear una aplicación web sencilla de creación de r
 
 ● JQuery 3.6.0
 
-● SQLite3
+● SQLite3 (La BD está en la raíz del proyecto 'CSreservas.db')
 
 ## Postulados
 
